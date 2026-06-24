@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35130.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDC", "CRUDC\CRUDC.csproj", "{2D610A73-22D3-4D7E-B6AB-8B0621E67C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D610A73-22D3-4D7E-B6AB-8B0621E67C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D610A73-22D3-4D7E-B6AB-8B0621E67C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D610A73-22D3-4D7E-B6AB-8B0621E67C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D610A73-22D3-4D7E-B6AB-8B0621E67C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7238EF5-0A48-4C41-A82D-C6F06E825432}
+	EndGlobalSection
+EndGlobal
