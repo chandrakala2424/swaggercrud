@@ -1,0 +1,110 @@
+﻿
+@using System.Web.Helpers
+@model CRUDMVCs.Models.Employee
+
+@{
+    var grid = new WebGrid(ViewBag.EmployeeList, rowsPerPage: 5);
+}
+
+<h2>Employee CRUD</h2>
+
+<form method="post" action="/Employee/Save" onsubmit="return Validate();">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div>
+        Name :
+        <input type="text" name="Name" id="Name" value="@Model.Name" />
+    </div>
+
+    <br />
+
+    <div>
+        Email :
+        <input type="text" name="Email" id="Email" value="@Model.Email" />
+    </div>
+
+    <br />
+
+    <div>
+        Salary :
+        <input type="text" name="Salary" id="Salary" value="@Model.Salary" />
+    </div>
+
+    <br />
+
+    <input type="submit" value="Save" />
+
+</form>
+
+<br />
+<br />
+
+
+@grid.GetHtml(
+
+tableStyle: "table",
+
+columns: grid.Columns(
+
+grid.Column("Name", "Name"),
+
+grid.Column("Email", "Email"),
+
+grid.Column("Salary", "Salary"),
+
+
+grid.Column(
+header: "Action",
+format: @<text>
+
+    <a href="/Employee/Index/@item.Id">
+        Edit
+    </a>
+
+    |
+
+    <a href="/Employee/Delete/@item.Id"
+       onclick="return confirm('Delete Record?')">
+        Delete
+    </a>
+
+</text>
+)
+
+)
+
+)
+<script>
+
+    function Validate() {
+
+        if (Name.value == "") {
+            alert("Enter Name");
+            return false;
+        }
+
+        if (Email.value == "") {
+            alert("Enter Email");
+            return false;
+        }
+
+        if (!Email.value.includes("@@")) {
+            alert("Invalid Email");
+            return false;
+        }
+
+        if (Salary.value == "") {
+            alert("Enter Salary");
+            return false;
+        }
+
+        if (isNaN(Salary.value)) {
+            alert("Salary must be number");
+            return false;
+        }
+
+        return true;
+    }
+
+</script>
